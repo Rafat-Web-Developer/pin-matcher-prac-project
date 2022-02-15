@@ -18,6 +18,10 @@ document.getElementById('key').addEventListener('click', function(event){
     const currentKey = document.getElementById('showKey');
     if(event.target.innerText == 'C'){
         currentKey.value = '';
+    }else if(event.target.innerText == '<'){
+        const StrLength = currentKey.value.length;
+        const newStr = currentKey.value.substring(0, StrLength - 1);
+        currentKey.value = newStr;
     }else if(currentKey.value != ''){
         currentKey.value = currentKey.value + event.target.innerText;
     }else{
